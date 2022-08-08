@@ -24,7 +24,7 @@
   <meta name="description" content="前言2015年，FoxGlove Security安全团队的@breenmachine发布了一篇长博客，里面详细阐述了利用java反序列化和Apache Commons  Collections这一基础类库实现远程命令执行。 该漏洞影响了诸多java web server，同时也开启了各种java反序列漏洞的大门。在此之后，Apache Commons Collections项目组也对存在漏洞的类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="测试">
-<meta property="og:url" content="https://m1crosoft.site/article/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8.html">
+<meta property="og:url" content="https://m1crosoft.site/article/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8.jsp">
 <meta property="og:site_name" content="_ap">
 <meta property="og:description" content="前言2015年，FoxGlove Security安全团队的@breenmachine发布了一篇长博客，里面详细阐述了利用java反序列化和Apache Commons  Collections这一基础类库实现远程命令执行。 该漏洞影响了诸多java web server，同时也开启了各种java反序列漏洞的大门。在此之后，Apache Commons Collections项目组也对存在漏洞的类">
 <meta property="og:locale">
@@ -56,7 +56,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/22346635/1649450187493-8021bc24-9a40-42be-9571-afbf438c55e3.png">
 
-<link rel="canonical" href="https://m1crosoft.site/article/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8.html">
+<link rel="canonical" href="https://m1crosoft.site/article/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8.jsp">
 
 
 <script id="page-configurations">
@@ -208,7 +208,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://m1crosoft.site/article/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8.html">
+    <link itemprop="mainEntityOfPage" href="https://m1crosoft.site/article/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8.jsp">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/Avatar/ava.jpg">
@@ -257,8 +257,8 @@
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/article/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/article/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8.html" itemprop="commentCount"></span>
+    <a title="valine" href="/article/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8.jsp#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/article/java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%A5%E9%97%A8.jsp" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -404,7 +404,7 @@
     <div class="post-nav">
       <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/article/220806-%E6%97%A5%E8%AE%B0.html" rel="next" title="220806-日记">
+    <a href="/article/220806-%E6%97%A5%E8%AE%B0.jsp" rel="next" title="220806-日记">
       220806-日记 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
