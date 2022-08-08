@@ -196,7 +196,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/article/class-forname.html" class="post-title-link" itemprop="url">class.forname</a>
+            <a href="/article/class-forname.html" class="post-title-link" itemprop="url">看看class.forName()</a>
         </h2>
 
         <div class="post-meta">
@@ -207,7 +207,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-08-08 11:23:02 / Modified: 13:20:18" itemprop="dateCreated datePublished" datetime="2022-08-08T11:23:02+08:00">2022-08-08</time>
+              <time title="Created: 2022-08-08 11:23:02 / Modified: 15:13:32" itemprop="dateCreated datePublished" datetime="2022-08-08T11:23:02+08:00">2022-08-08</time>
             </span>
 
           
@@ -230,7 +230,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>251</span>
+              <span>234</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -249,12 +249,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="关于Class-forName"><a href="#关于Class-forName" class="headerlink" title="关于Class.forName()"></a>关于Class.forName()</h1><blockquote>
+          <blockquote>
 <p><strong>java.lang.Class</strong></p>
 </blockquote>
 <p>CLass类中的<code>forName()</code>方法其实调用了<code>forName0()</code> 方法</p>
 <p><img src="/article/class-forname/image_bfffCghJMm.png"></p>
 <p>可以看到<code>forName0()</code>是一个native方法，其中第二个代表类初始化，所以调用<code>forName()</code> 默认就选择了初始化类，即会执行类静态方法的内容</p>
+<p><img src="/article/class-forname/image_7TAWWJTdGf.png"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/article/class-forname.html#more" rel="contents">

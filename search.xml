@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>class.forname</title>
+    <title>看看class.forName()</title>
     <url>/article/class-forname.html</url>
-    <content><![CDATA[<h1 id="关于Class-forName"><a href="#关于Class-forName" class="headerlink" title="关于Class.forName()"></a>关于Class.forName()</h1><blockquote>
+    <content><![CDATA[<blockquote>
 <p><strong>java.lang.Class</strong></p>
 </blockquote>
 <p>CLass类中的<code>forName()</code>方法其实调用了<code>forName0()</code> 方法</p>
