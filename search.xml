@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>class.forname</title>
-    <url>/2022/08/08/class-forname/</url>
-    <content><![CDATA[<h1 id="关于Class-forName"><a href="#关于Class-forName" class="headerlink" title="关于Class.forName()"></a>关于Class.forName()</h1><blockquote>
-<p><strong>java.lang.Class</strong></p>
-</blockquote>
-<p>CLass类中的<code>forName()</code>方法其实调用了<code>forName0()</code> 方法</p>
-<p><img src="/.site//image_bfffCghJMm.png"></p>
-<p>可以看到<code>forName0()</code>是一个native方法，其中第二个代表类初始化，所以调用<code>forName()</code> 默认就选择了初始化类，即会执行类静态方法的内容</p>
-<p><img src="/.site//image_7TAWWJTdGf.png"></p>
-<p>另外注意到<code>ClassLoader.getSystemClassLoader().loadClass()</code> 也可以加载类，但是不同的是该方法只将class文件加载进JVM中而不会执行静态代码块，直到<code>invoke()</code>方法被调用</p>
-]]></content>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>220806-日记</title>
     <url>/2022/08/06/220806-%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<p>热死了 还好有风扇</p>
 ]]></content>
       <tags>
         <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>class.forname</title>
+    <url>/2022/08/08/class-forname/</url>
+    <content><![CDATA[<h1 id="关于Class-forName"><a href="#关于Class-forName" class="headerlink" title="关于Class.forName()"></a>关于Class.forName()</h1><blockquote>
+<p><strong>java.lang.Class</strong></p>
+</blockquote>
+<p>CLass类中的<code>forName()</code>方法其实调用了<code>forName0()</code> 方法</p>
+<p><img src="/image_bfffCghJMm.png"></p>
+<p>可以看到<code>forName0()</code>是一个native方法，其中第二个代表类初始化，所以调用<code>forName()</code> 默认就选择了初始化类，即会执行类静态方法的内容</p>
+<p><img src="/image/image_7TAWWJTdGf.png"></p>
+<p>另外注意到<code>ClassLoader.getSystemClassLoader().loadClass()</code> 也可以加载类，但是不同的是该方法只将class文件加载进JVM中而不会执行静态代码块，直到<code>invoke()</code>方法被调用</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
