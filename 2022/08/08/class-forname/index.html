@@ -28,14 +28,14 @@
 <meta property="og:site_name" content="_ap">
 <meta property="og:description" content="关于Class.forName() java.lang.Class  CLass类中的forName()方法其实调用了forName0() 方法  可以看到forName0()是一个native方法，其中第二个代表类初始化，所以调用forName() 默认就选择了初始化类，即会执行类静态方法的内容">
 <meta property="og:locale">
-<meta property="og:image" content="http://m1crosoft.site/.com//image_bfffCghJMm.png">
-<meta property="og:image" content="http://m1crosoft.site/.com//image_7TAWWJTdGf.png">
+<meta property="og:image" content="http://m1crosoft.site/.site//image_bfffCghJMm.png">
+<meta property="og:image" content="http://m1crosoft.site/.site//image_7TAWWJTdGf.png">
 <meta property="article:published_time" content="2022-08-08T03:23:02.000Z">
-<meta property="article:modified_time" content="2022-08-08T03:37:10.147Z">
+<meta property="article:modified_time" content="2022-08-08T04:53:49.830Z">
 <meta property="article:author" content="ap">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://m1crosoft.site/.com//image_bfffCghJMm.png">
+<meta name="twitter:image" content="http://m1crosoft.site/.site//image_bfffCghJMm.png">
 
 <link rel="canonical" href="http://m1crosoft.site/2022/08/08/class-forname/">
 
@@ -213,7 +213,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-08-08 11:23:02 / Modified: 11:37:10" itemprop="dateCreated datePublished" datetime="2022-08-08T11:23:02+08:00">2022-08-08</time>
+              <time title="Created: 2022-08-08 11:23:02 / Modified: 12:53:49" itemprop="dateCreated datePublished" datetime="2022-08-08T11:23:02+08:00">2022-08-08</time>
             </span>
 
           
@@ -266,9 +266,9 @@
 <p><strong>java.lang.Class</strong></p>
 </blockquote>
 <p>CLass类中的<code>forName()</code>方法其实调用了<code>forName0()</code> 方法</p>
-<p><img src="/.com//image_bfffCghJMm.png"></p>
+<p><img src="/.site//image_bfffCghJMm.png"></p>
 <p>可以看到<code>forName0()</code>是一个native方法，其中第二个代表类初始化，所以调用<code>forName()</code> 默认就选择了初始化类，即会执行类静态方法的内容</p>
-<p><img src="/.com//image_7TAWWJTdGf.png"></p>
+<p><img src="/.site//image_7TAWWJTdGf.png"></p>
 <p>另外注意到<code>ClassLoader.getSystemClassLoader().loadClass()</code> 也可以加载类，但是不同的是该方法只将class文件加载进JVM中而不会执行静态代码块，直到<code>invoke()</code>方法被调用</p>
 
     </div>
