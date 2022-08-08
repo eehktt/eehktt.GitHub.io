@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>220806-日记</title>
+    <url>/2022/08/06/220806-%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<p>热死了 还好有风扇</p>
+]]></content>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>class.forname</title>
     <url>/2022/08/08/class-forname/</url>
     <content><![CDATA[<h1 id="关于Class-forName"><a href="#关于Class-forName" class="headerlink" title="关于Class.forName()"></a>关于Class.forName()</h1><blockquote>
@@ -14,15 +23,6 @@
 ]]></content>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>220806-日记</title>
-    <url>/2022/08/06/220806-%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<p>热死了 还好有风扇</p>
-]]></content>
-      <tags>
-        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
